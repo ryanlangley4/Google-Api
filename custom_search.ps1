@@ -1,7 +1,7 @@
 function search-custom() {
 	Param(
 		[Parameter(Mandatory = $true)][string]$search,
-		[AllowEmptyString()] $customsearch_id = "006759091738829999417%3A-ynq7qhchoc",
+		[AllowEmptyString()] $customsearch_id = "<enter your own custom search id>",
 		[AllowEmptyString()]$api_key="<your key>"
 	)
 	

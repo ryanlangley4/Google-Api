@@ -46,7 +46,7 @@ Param(
 	[AllowEmptyString()]$copyright = "any",
 	[AllowEmptyString()]$youtube_key="<your key>"
 )
-echo "First search"
+
 $Search_results = invoke-restmethod "https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=$youtube_key&part=snippet"
 $page_count = 1
 $video_list = @()
@@ -74,7 +74,7 @@ $video_list = @()
 			}			
 		
 		}
-echo "3rd search"
+
 	$Search_results = invoke-restmethod "https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&pageToken=$next_page&key=$youtube_key"
 	$page_count++
 	}
